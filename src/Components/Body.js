@@ -10,11 +10,11 @@ const Body = () => {
         [
             
             {
-                path: "/NetflixGPT",
+                path: "/",
                 element: <Login />
             },
             {
-                path: "/NetflixGPT/browse",
+                path: "/browse",
                 element: <Browse />
             }
         ]

@@ -2,6 +2,12 @@
 
 - Create React App
 - Configured TailwindCSS
+- Header
+- Routing of App
+- Login Form
+- Signup Form
+- Form Validation
+- useRef Hook used
 
 # Features
 
