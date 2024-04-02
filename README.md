@@ -8,6 +8,11 @@
 - Signup Form
 - Form Validation
 - useRef Hook used
+- Deployed my App to Production
+- create Signup User Account
+- Implement Sign in User Api
+- Created Redux Store with User slice
+
 
 # Features
 
