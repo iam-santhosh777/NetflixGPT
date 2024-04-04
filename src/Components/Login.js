@@ -23,7 +23,6 @@ const Login = () => {
             alert('Passwords do not match');
             return;
         }
-
         const message = checkValidData(email.current.value, password.current.value);
         setErrMessage(message);
 
@@ -49,7 +48,7 @@ const Login = () => {
                     console.log(user);
                     const {uid, email, displayName, photoURL} = auth.currentUser;
                     dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
-                    navigate('/browse');
+                    // navigate('/browse');
                     // ...
                   }).catch((error) => {
                     // An error occurred
@@ -74,7 +73,7 @@ const Login = () => {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user);
-                navigate('/browse');
+                // navigate('/browse');
                 // ...
             })
             .catch((error) => {
