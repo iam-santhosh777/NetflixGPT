@@ -12,8 +12,11 @@
 - create Signup User Account
 - Implement Sign in User Api
 - Created Redux Store with User slice
-
-
+- signout and signout bug fixed
+- Unsubscribed to the onAuthChanged callback
+- Add hardcoded values to the constants file
+- registered in TMDB API & create an app & get access token
+- get data from TMDB API
 # Features
 
 - Login/Signup Page

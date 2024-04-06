@@ -3,10 +3,10 @@ import Header from './Header';
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import axios from 'axios';
+import { appBg } from '../utils/constants';
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errMessage, setErrMessage] = useState(null);
@@ -14,7 +14,6 @@ const Login = () => {
     const password = useRef(null);
     const name = useRef(null);
     const confirmPassword = useRef(null);
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const handleButtonClick = () => {
         
@@ -41,14 +40,13 @@ const Login = () => {
                 // Signed up 
                 const user = userCredential.user;
                 updateProfile(user, {
-                    displayName: name.current.value, photoURL: "https://res.cloudinary.com/dksynwdd7/image/upload/v1712056075/IMG_1300_fo5rjd.jpg"
+                    displayName: name.current.value, photoURL: "https://res.cloudinary.com/dksynwdd7/image/upload/v1679564076/samples/people/smiling-man.jpg"
                   }).then(() => {
                     // Profile updated!
 
                     console.log(user);
                     const {uid, email, displayName, photoURL} = auth.currentUser;
                     dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
-                    // navigate('/browse');
                     // ...
                   }).catch((error) => {
                     // An error occurred
@@ -73,7 +71,6 @@ const Login = () => {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user);
-                // navigate('/browse');
                 // ...
             })
             .catch((error) => {
@@ -93,7 +90,7 @@ const Login = () => {
         <div>
             <Header />
             <div className='absolute h-full'>
-                <img src="https://res.cloudinary.com/dksynwdd7/image/upload/v1711438530/App_bg_fbl4lx.jpg" alt="netflixBg" className='relative h-screen w-screen'/>
+                <img src={appBg} alt="netflixBg" className='relative h-screen w-screen'/>
             </div>
             <form onSubmit={(e) => e.preventDefault()} className='flex flex-col w-[50%] md:w-4/12 flex-shrink-0 absolute text-white bg-black bg-opacity-80 p-8 my-[10%] mx-auto right-0 left-0 rounded-lg'>
                 <h1 className='text-2xl font-medium py-2'>{isSignInForm ? 'Sign In' : 'Sign Up'}</h1>
