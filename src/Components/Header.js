@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <div className='absolute bg-gradient-to-b from-black  w-full h-18 z-30 flex justify-between'>
-        <img src={netflixLogo} alt='netflixLogo' className='w-[15%]'/>
+        <img src={netflixLogo} alt='netflixLogo' className='w-[15%] pl-8'/>
         { user && (
           <div className='flex justify-center items-center p-2'>
           <img className='w-8 h-8 ' alt='profile' src={user?.photoURL} />

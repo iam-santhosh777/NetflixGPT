@@ -17,6 +17,7 @@
 - Add hardcoded values to the constants file
 - registered in TMDB API & create an app & get access token
 - get data from TMDB API
+- created custom Hooks for separation of API Calls
 # Features
 
 - Login/Signup Page
