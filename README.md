@@ -18,6 +18,18 @@
 - registered in TMDB API & create an app & get access token
 - get data from TMDB API
 - created custom Hooks for separation of API Calls
+- Custom Hook for Now Playing Movies
+- update store with movies Data
+- Created movieSlice
+- planning for main container and secondary container
+- fetch data for trailer video
+- added Youtube IFrame API script tag
+-  Trailer Video Component
+- update store with Trailers Data
+
+
+
+
 # Features
 
 - Login/Signup Page

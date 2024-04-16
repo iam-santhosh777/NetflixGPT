@@ -3,12 +3,13 @@ import { API_OPTIONS } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addTrailerVideo } from "../utils/movieSlice";
-const useTrailerVideo = ({movieId}) => {
+const useTrailerVideo = (movieId) => {
     const dispatch = useDispatch();
  
   // fetch trailer video from TMDB
     const getMoviesVideos = () => {
-    axios.get("https://api.themoviedb.org/3/movie/" + movieId + "/videos", API_OPTIONS)
+    //axios.get("https://api.themoviedb.org/3/movie/" + movieId + "/videos", API_OPTIONS)
+    axios.get("https://api.themoviedb.org/3/movie/976573/videos", API_OPTIONS)
     .then(response => {
       //console.log(response.data);
       const filteredTrailer = response.data?.results?.filter((video) => video.type === "Trailer" && video.site === "YouTube");
